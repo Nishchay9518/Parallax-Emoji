@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax Emoji</title>
+</head>
+
+<body>
+<h1 contenteditable="true" class="headline" >Created by NSHCHY</h1>
+   
+<section>   
+    <!--Face-->
+    <ul id="emoji">
+
+        <li class="layer">
+        <div class="face"></div>
+        </li>
+
+        <!--Left-eye-->
+        <li class="layer" data-depth="0.8">
+        <div class="eye left"></div>
+        <div class=" eyesa left">
+        <div class="eyesb left"></div></div>
+        </li>
+
+        <!--Right-eye-->
+        <li class="layer" data-depth="0.8">
+        <div class="eye  right"></div>
+        <div class=" eyesa right">
+        <div class="eyesb  right"></div></div>
+        </li>
+
+        <!--Mouth-->
+        <li class="layer" data-depth="0.8">
+        <div class="mouth s_mouth teath tounge"></div>
+        </li>
+
+        </ul>
+</section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/2.1.3/parallax.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

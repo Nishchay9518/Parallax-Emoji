@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+body{
+  background-color: grey;
+}
+
+.headline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-self: center;
+  margin-top: 20px;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#emoji {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 230px;
+  height: 230px;
+  background-color: #fcff4e;
+  border-radius: 100%;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.4) 0 0 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 30px;
+  
+}
+
+#emoji:hover .eyesa {
+  position: absolute;
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  left: calc(50% - 13px);
+  top: 85px;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  background: transparent;
+  box-shadow: -25px 5px 0 0 #000000, 25px -5px 0 0 #000000;
+}
+#emoji:hover .eyesb {
+  left: 0px;
+  top: 0;
+  width: 26px;
+  height: 6px;
+  border-radius: 2px;
+  -webkit-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+  background: transparent;
+  box-shadow: -25px -5px 0 0 #000000, 25px 5px 0 0 #000000;
+}
+
+.eye {
+  width: 24px;
+  height: 38px;
+  background-color: #a1620f;
+  border-radius: 100%;
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.5) 0 6px 12px,
+    rgba(255, 255, 255, 0.2) 0 2px 0 2px;
+  box-shadow: inset rgba(0, 0, 0, 0.5) 0 6px 12px,
+    rgba(255, 255, 255, 0.2) 0 2px 0 2px;
+  -webkit-animation: blink 5s infinite;
+  animation: blink 5s infinite;
+  transition: all ease-in-out 0.2s;
+}
+
+#emoji:hover .eye {
+  display: none;
+}
+
+.eye.left {
+  position: absolute;
+  top: 0;
+  right: 70px;
+  bottom: 40px;
+  left: 0;
+  margin: auto;
+}
+
+.eye.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 40px;
+  left: 70px;
+  margin: auto;
+}
+
+.mouth {
+  position: absolute;
+  top: 88px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  width: 94px;
+  height: 48px;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.mouth:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 10px;
+  left: 0;
+  margin: auto;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #6e440b;
+  border-radius: 100%;
+  -webkit-box-shadow: rgba(255, 255, 255, 0.25) 0 3px 0;
+  box-shadow: rgba(255, 255, 255, 0.25) 0 3px 0;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.mouth:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 26px;
+  left: 0;
+  margin: auto;
+  content: "";
+  width: calc(100% - 20px);
+  height: 100%;
+  background-color: #fcff4e;
+  border-radius: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 4px 4px -4px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0 4px 4px -4px;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+#emoji:hover .s_mouth {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 145px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 0 0 70px 70px;
+  overflow: hidden;
+  background: #664f26;
+}
+
+#emoji:hover .s_mouth:before,
+#emoji:hover .s_mouth:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+#emoji:hover .s_mouth.teath:before {
+  top: -85%;
+  width: 100%;
+
+  height: 25px;
+  z-index: 2;
+  border-radius: 0 0 50px 50px;
+  background: #fffae6;
+}
+
+#emoji:hover .s_mouth.tounge:after {
+  position: absolute;
+  width: 58px;
+  height: 35px;
+  left: 0;
+  right: 0;
+  top: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #fe7783;
+}
+
+#emoji:hover .s_mouth {
+  animation-name: giggle;
+  animation-iteration-count: infinite;
+  animation-duration: 0.2s;
+}
+
+@keyframes giggle {
+  0% {
+    transform: translate(0, -1px);
+  }
+  50% {
+    transform: translate(0, 2px);
+  }
+  100% {
+    transform: translate(0, -1px);
+  }
+}
+
+@-webkit-keyframes blink {
+  0%,
+  96% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  98% {
+    -webkit-transform: scaleY(0.1);
+    transform: scaleY(0.1);
+  }
+
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
